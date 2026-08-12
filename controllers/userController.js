@@ -17,3 +17,19 @@ exports.getUsers = async (req, res) => {
     res.json(users);
 };
 
+// Buscar usuário por ID
+exports.getUserById = async (req, res) => {
+    const user = await User.findByPk(req.params.id);
+
+    if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
+    res.json(user);
+};
+
+// Atualizar usuário
+exports.updateUser = async (req, res) => {
+    const user = await User.findByPk(req.params.id);
+    
+    if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
+    await user.update(req.body);
+    res.json(user);
+};
