@@ -1,1 +1,4 @@
-gg
+Para fazer o projeto funcionar, primeiro abra o terminal na pasta do projeto e instale as dependências usando: npm install, npm init -y, npm i express sequelize sqlite3, Depois, para iniciar a API, use: node app.js Se tudo estiver funcionando, o terminal vai mostrar que o banco de dados foi sincronizado e que o servidor está rodando em http://localhost:3000. Os testes da API podem ser feitos pelo Thunder Client.
+  
+   Foram testadas as funções de cadastrar usuário com POST, listar usuários com GET, buscar um usuário pelo ID com GET, atualizar com PUT e deletar com DELETE.
+    As rotas utilizadas começam com: http://localhost:3000/api/users Para cadastrar ou atualizar um usuário, são utilizados os campos nome e email. Os testes feitos no Thunder Client também foram registrados em prints dentro do projeto.
